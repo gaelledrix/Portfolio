@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../Portfolio_images/HELLO_32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="../Portfolio_images/HELLO_16.png?v=1">
+  <link rel="icon" type="image/png" sizes="180x180" href="../Portfolio_images/HELLO_180.png?v=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Serif:ital,opsz,wght@0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../Portfolio_css/About.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 id="homeLink" onclick="goToHomePage()">Gaëlle Drix</h1>  
+      <div class="header-right">
+        <a href="About.html" class="about-link active">About</a>
+          <div class="lang-buttons">
+            <button class="active">EN</button>
+            <button onclick="location.href='../Portfolio_FR.html'">FR</button>
+            <button onclick="location.href='../Portfolio_PT.html'">PT</button>
+          </div>  
+      </div>
+    </div>
+    <div class="about-container">
+      <div class="about-image">
+        <img src="../Portfolio_images/HELLO.webp" alt="Gaëlle Drix">
+      </div>
+      <div class="about-text">
+        <p class="intro-text">I am a Communication Design Master’s student at the Faculty of Fine Arts of Lisbon (FBAUL). In my practice, I explore editorial objects, websites, and photography.</p>
+        <p class="intro-text">Interested in traditional printing methods (such as risography) as well as cultural and politically engaged posters, I aim to work in the fields of culture and publishing.</p>
+        <div class="about-info-grid">
+          <div class="about-info-column">
+            <h2>Contact</h2>
+            <p>Gaëlle Drix</p>
+            <p>+33695790345</p>
+            <p>gaelle.drix@gmail.com</p>
+            <p>@dgadzzo</p>
+          </div>
+          <div class="about-info-column">
+            <h2>Fonts used</h2>
+            <p>Roboto</p>
+            <p>Roboto serif</p>
+          </div>
+        </div>
+        <div class="cv-section">
+          <h2><a href="../Portfolio_images/CV_Gaelle_Drix.pdf" class="project-link" target="_blank">Download CV</a></h2>
+        </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+      <div class="footer-spacer"></div>
+      <p id="footer-info" class="project-info"></p>
+      <p class="copyright">
+        © Gaëlle Drix, 2025. All rights reserved.
+      </p>
+    </div>
+  </div>
+  <script>
+    function goToHomePage() {
+      const currentLang = document.querySelector('.lang-buttons button.active').textContent;
+      
+      switch(currentLang) {
+        case 'EN':
+          window.location.href = '../index.html'; 
+          break;
+        case 'FR':
+          window.location.href = '../Portfolio_FR.html';
+          break;
+        case 'PT':
+          window.location.href = '../Portfolio_PT.html';
+          break;
+        default:
+          window.location.href = 'index.html';
+      }
+    };
+  </script>
+</body>
+</html>
